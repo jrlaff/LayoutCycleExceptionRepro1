@@ -25,5 +25,8 @@ public partial class KeysListApplet : ContentView
     public KeysListApplet()
     {
         InitializeComponent();
+
+        Content.BindingContext = this;
     }
 }
+
