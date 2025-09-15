@@ -16,7 +16,7 @@
 
                 <CollectionView Grid.Row="1"
                                 Grid.Column="0"
-                                ItemsSource="{Binding KeyGroups, Source={x:Reference root}}">
+                                ItemsSource="{Binding KeyGroups}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Border>
@@ -29,3 +29,4 @@
         </ContentView>
     </ContentView.Content>
 </ContentView>
+
