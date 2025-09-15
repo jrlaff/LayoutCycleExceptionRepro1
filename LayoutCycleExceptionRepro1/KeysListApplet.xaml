@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:db="clr-namespace:LayoutCycleExceptionRepro1"
+             xmlns:v="clr-namespace:LayoutCycleExceptionRepro1"
+             xmlns:ctrl="clr-namespace:LayoutCycleExceptionRepro1"
+             x:Class="LayoutCycleExceptionRepro1.KeysListApplet"
+             x:DataType="v:KeysListApplet"
+             x:Name="root"
+             BackgroundColor="DimGray">
+    <ContentView.Content>
+        <ContentView x:Name="MainContentView">
+            <Grid x:Name="MainGrid"
+                  RowDefinitions="40,*"
+                  ColumnDefinitions="1*,2*">
+
+                <CollectionView Grid.Row="1"
+                                Grid.Column="0"
+                                ItemsSource="{Binding KeyGroups, Source={x:Reference root}}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <Label Text="." />
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </Grid>
+        </ContentView>
+    </ContentView.Content>
+</ContentView>
