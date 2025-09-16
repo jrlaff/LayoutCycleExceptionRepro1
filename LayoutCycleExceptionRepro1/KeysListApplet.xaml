@@ -20,7 +20,7 @@
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
                             <Border>
-                                <Label Text="." />
+                                <Label Text="{Binding .}" />
                             </Border>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -29,4 +29,5 @@
         </ContentView>
     </ContentView.Content>
 </ContentView>
+
 
